@@ -1,0 +1,91 @@
+.my-orders {
+    padding: 40px;
+    margin: 50px auto;
+    width: 72%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    font-size: 14px;
+}
+
+.my-orders h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hotel .my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.hotel .my-orders-order {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid tomato;
+    border-radius: 5px;
+}
+
+.hotel .my-orders-order p {
+    margin: 0;
+}
+
+.hotel .my-orders-order select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+.hotel .my-orders-order select:focus {
+    outline: none;
+    border-color: tomato;
+}
+
+.hotel .my-orders-order select option {
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ffe1e1;
+    cursor: pointer;
+    color: #454545;
+}
+
+@media (max-width: 900px) {
+    .hotel .my-orders-order {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 15px;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .hotel .my-orders-order select {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-orders {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .hotel .my-orders-order {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .hotel .my-orders-order p {
+        text-align: center;
+    }
+}
