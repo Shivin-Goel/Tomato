@@ -28,7 +28,7 @@ const AddFoodItem = () => {
     };
     // http://localhost:4000
     try {
-      const response = await axios.post('https://night-canteen.onrender.com/api/hotel/items', foodItem, {
+      const response = await axios.post('http://localhost:4000/api/hotel/items', foodItem, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',

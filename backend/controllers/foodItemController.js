@@ -3,9 +3,9 @@ import foodItemModel from '../models/foodItemModel.js';
 import { v2 as cloudinary } from 'cloudinary';
 
 cloudinary.config({
-    cloud_name: 'djv4tadys',
-    api_key: '186821221625717',
-    api_secret: 'kq04uihCfs4xWENFQJGy1QgE_Wc',
+    cloud_name: 'dhaldgpy6',
+    api_key: '619899177357359',
+    api_secret: '5NGq36A-hq6YQ_cDZtbDpip2eoU',
 });
 
 const getFoodItemsByHotel = async (req, res) => {

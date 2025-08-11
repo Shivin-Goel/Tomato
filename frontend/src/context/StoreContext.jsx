@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
-    const url = "https://night-canteen.onrender.com";
+    const url = "http://localhost:4000";
     const [token, setToken] = useState("");
     const [userType, setUserType] = useState("user");
 
