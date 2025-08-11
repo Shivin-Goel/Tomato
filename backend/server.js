@@ -30,7 +30,7 @@ app.use(cors());
 // }))
 
 // app.use(express.static(path.join(__dirname, "../../frontend/dist")));
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+//app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 // api endpoint
 app.use("/api/user",userRouter)
@@ -43,9 +43,9 @@ app.use("/api/order",orderRouter)
 //     res.send("API working")
 // })
 
-app.get("*", (req,res) => {
-    res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
-});
+//app.get("*", (req,res) => {
+//    res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+// });
 
 // app.use('*',function(req,res){
 //     res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
