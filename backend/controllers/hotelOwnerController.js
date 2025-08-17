@@ -69,7 +69,7 @@ const registerHotelOwner = async (req, res) => {
         const hotelOwner = await newHotelOwner.save();
 
         const token = createToken(hotelOwner._id);
-        res.json({ seccess: true, token: token, hotelOwner: hotelOwner });
+        res.json({ success: true, token: token, hotelOwner: hotelOwner });
 
     } catch (error) {
 
