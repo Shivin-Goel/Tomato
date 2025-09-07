@@ -49,15 +49,25 @@ const StoreContextProvider = (props) => {
     }
 
     const addToCart = (id, hotelId) => {
-        setCartItems((prevItems) => ({
+    setCartItems((prevItems) => {
+        // If cart already has items from a different hotel
+        const existingHotelIds = Object.values(prevItems).map(item => item.hotelId);
+        if (existingHotelIds.length > 0 && existingHotelIds[0] !== hotelId) {
+            alert("You can only order from one hotel at a time!");
+            return prevItems; // do not update cart
+        }
+
+        // Otherwise, add/update the item
+        return {
             ...prevItems,
             [id]: {
                 quantity: (prevItems[id]?.quantity || 0) + 1,
                 hotelId: hotelId
             }
-        }));
-        // console.log(`Added to cart: ${id}, Hotel: ${hotelId}`);
-    };
+        };
+    });
+};
+
 
     const removeFromCart = (id) => {
         setCartItems((prevItems) => {
