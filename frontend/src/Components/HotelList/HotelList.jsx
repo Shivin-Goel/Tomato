@@ -38,13 +38,7 @@ const HotelList = ({ onSelectHotel }) => {
                 })}
             </div>
 
-            {/* <ul>
-                {hotels.map(hotel => (
-                    <li key={hotel._id}>
-                        <button onClick={() => onSelectHotel(hotel._id)}>{hotel.name}</button>
-                    </li>
-                ))}
-            </ul> */}
+
         </div>
     );
 };
