@@ -30,7 +30,7 @@ const Cart = () => {
             const order = {
                 items,
                 totalPrice,
-                hotelId: cartItemsArray[1][1].hotelId, // Assuming all items are from the same hotel
+                hotelId: cartItemsArray[0][1].hotelId, // Assuming all items are from the same hotel
             };
 
             const response = await axios.post(`${url}/api/order/orders`, order, {
